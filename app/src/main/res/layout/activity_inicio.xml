@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Mascotas">
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Mascotas"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"/>
+    tools:context=".Inicio">
+
+<TextView
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+    android:text="Inicio"
+    android:textSize="50sp"
+    android:textStyle="bold"
+    android:layout_centerInParent="true"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
