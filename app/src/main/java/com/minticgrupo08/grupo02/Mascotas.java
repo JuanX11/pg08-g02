@@ -20,17 +20,14 @@ public class Mascotas extends AppCompatActivity {
             BottomNavigationView bottomNavigationView = findViewById(R.id.barra_navegacion_inferior);
             //Selección Principal
             bottomNavigationView.setSelectedItemId(R.id.Mascotas);
-
+            //Desing
+            bottomNavigationView.setBackground(null);
             //Item Select Listener
             bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                     switch (menuItem.getItemId()){
-                        case R.id.Buscador:
-                            startActivity(new Intent(getApplicationContext()
-                                    ,Buscador.class));
-                            overridePendingTransition(0,0);
-                            return true;
+
 
                         case R.id.Inicio:
                             startActivity(new Intent(getApplicationContext()
@@ -38,8 +35,20 @@ public class Mascotas extends AppCompatActivity {
                             overridePendingTransition(0,0);
                             return true;
 
+                        case R.id.Buscador:
+                            startActivity(new Intent(getApplicationContext()
+                                    ,Buscador.class));
+                            overridePendingTransition(0,0);
+                            return true;
+
 
                         case R.id.Mascotas:
+                            return true;
+
+                        case R.id.MiCuenta:
+                            startActivity(new Intent(getApplicationContext()
+                                    ,MiCuenta.class));
+                            overridePendingTransition(0,0);
                             return true;
 
                     }

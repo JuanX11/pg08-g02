@@ -20,25 +20,34 @@ public class Buscador extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.barra_navegacion_inferior);
         //Selección Principal
         bottomNavigationView.setSelectedItemId(R.id.Buscador);
-
+        //Desing
+        bottomNavigationView.setBackground(null);
         //Item Select Listener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
+                    case R.id.Inicio:
+                        startActivity(new Intent(getApplicationContext()
+                                ,Inicio.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
                     case R.id.Buscador:
                         return true;
 
-                    case R.id.Inicio:
-                        startActivity(new Intent(getApplicationContext()
-                            ,Inicio.class));
-                        overridePendingTransition(0,0);
-                        return true;
+
 
 
                     case R.id.Mascotas:
                         startActivity(new Intent(getApplicationContext()
                                 ,Mascotas.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.MiCuenta:
+                        startActivity(new Intent(getApplicationContext()
+                                ,MiCuenta.class));
                         overridePendingTransition(0,0);
                         return true;
                 }

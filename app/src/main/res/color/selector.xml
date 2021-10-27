@@ -4,7 +4,8 @@
     <item
 
         android:state_selected="true"
-        android:color="@android:color/white"/>
+        android:color="#2196F3"
+        />
 
     <item
         android:state_selected="false"
