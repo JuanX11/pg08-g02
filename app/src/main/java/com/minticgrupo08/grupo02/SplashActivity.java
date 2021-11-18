@@ -7,17 +7,23 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 public class SplashActivity extends AppCompatActivity {
     private final int DURACION_SPLASH= 3000;
 
+    LottieAnimationView lottieAnimationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        lottieAnimationView =findViewById(R.id.lottie);
+        lottieAnimationView.animate().translationY(1400).setDuration(1000).setStartDelay(4000);
+
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_splash);
+
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -25,7 +31,7 @@ public class SplashActivity extends AppCompatActivity {
                 Intent intent = new Intent(SplashActivity.this, Inicio.class);
                 startActivity(intent);
                 finish();
-            };
+            }
         }, DURACION_SPLASH);
     }
 }

@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Fab_Bottom_app_bar">
+
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -18,20 +19,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MiCuenta"
-            android:exported="false" />
-        <activity
-            android:name=".Buscador"
             android:exported="false" />
         <activity
             android:name=".Mascotas"
             android:exported="false" />
         <activity
             android:name=".Inicio"
-            android:exported="true"/>
-
+            android:exported="true" />
     </application>
 
 </manifest>

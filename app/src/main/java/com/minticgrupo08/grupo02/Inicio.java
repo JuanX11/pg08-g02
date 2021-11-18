@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+
 public class Inicio extends AppCompatActivity {
 
     @Override
@@ -31,11 +32,7 @@ public class Inicio extends AppCompatActivity {
                     case R.id.Inicio:
                         return true;
 
-                    case R.id.Buscador:
-                        startActivity(new Intent(getApplicationContext()
-                                ,Buscador.class));
-                        overridePendingTransition(0,0);
-                        return true;
+
 
                     case R.id.Mascotas:
                         startActivity(new Intent(getApplicationContext()
@@ -48,6 +45,7 @@ public class Inicio extends AppCompatActivity {
                                 ,MiCuenta.class));
                         overridePendingTransition(0,0);
                         return true;
+
                 }
                 return false;
             }
