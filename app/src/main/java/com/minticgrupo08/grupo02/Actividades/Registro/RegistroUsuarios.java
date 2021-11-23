@@ -96,4 +96,6 @@ public class RegistroUsuarios extends AppCompatActivity implements  View.OnClick
         registrarUsuario();
 
     }
+
+
 }

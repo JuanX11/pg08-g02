@@ -4,21 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Actividades.Registro.RegisUsuarioActivity">
+    tools:context=".Actividades.Registro.RegistroUsuarios">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
+
         android:background="#6BB3A1"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="10dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="128dp"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="100dp"
             android:adjustViewBounds="false"
@@ -27,9 +29,8 @@
 
         <EditText
             android:id="@+id/TextEmail"
-            android:paddingStart="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="39dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="50dp"
@@ -37,16 +38,17 @@
             android:background="@android:drawable/edit_text"
             android:clickable="false"
             android:cursorVisible="false"
+            android:drawableLeft="@drawable/ic_email"
             android:ems="10"
-            android:hint="Email"
+            android:hint="  Email"
             android:inputType="textEmailAddress"
             android:isScrollContainer="true"
+            android:paddingStart="10dp"
 
             android:textStyle="italic" />
 
         <EditText
             android:id="@+id/TextPassword"
-            android:paddingStart="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
@@ -54,8 +56,10 @@
             android:layout_marginRight="50dp"
             android:background="@android:drawable/edit_text"
             android:ems="10"
-            android:hint="Contraseña"
+            android:drawableLeft="@drawable/ic_email"
+            android:hint="  Contraseña"
             android:inputType="textPassword"
+            android:paddingStart="10dp"
 
             android:textStyle="italic" />
 

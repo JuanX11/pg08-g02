@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mintic">
         <activity
+            android:name=".Actividades.Registro.Login"
+            android:exported="true" />
+        <activity
             android:name=".Actividades.Registro.RegistroUsuarios"
             android:exported="true" />
         <activity

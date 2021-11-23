@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.WindowManager;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.minticgrupo08.grupo02.Actividades.Registro.Login;
 import com.minticgrupo08.grupo02.Actividades.Registro.RegistroUsuarios;
 import com.minticgrupo08.grupo02.Actividades.Ventanas_Principales.Inicio;
 import com.minticgrupo08.grupo02.Actividades.Ventanas_Principales.Registro_Mascotas;
@@ -32,7 +33,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, RegistroUsuarios.class);
+                Intent intent = new Intent(SplashActivity.this, Login.class);
                 startActivity(intent);
                 finish();
             }
