@@ -2,54 +2,59 @@ package com.minticgrupo08.grupo02.Actividades.Ventanas_Principales;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.minticgrupo08.grupo02.R;
 
 public class MiCuenta extends AppCompatActivity {
-
+DrawerLayout drawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mi_cuenta);
-        //Barra de Navegación
-        //Iniciar y Crear Variables
-        BottomNavigationView bottomNavigationView = findViewById(R.id.barra_navegacion_inferior);
-        //Selección Principal
-        bottomNavigationView.setSelectedItemId(R.id.MiCuenta);
-        //Desing
-        bottomNavigationView.setBackground(null);
-        //Item Select Listener
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()){
+        //nav
+        drawerLayout= findViewById(R.id.drawerlayout);
+    }
+    public void ClickMenu (View view){
+        //Open Drawer
+        Inicio.openDrawer(drawerLayout);
+    }
 
 
-                    case R.id.Inicio:
-                        startActivity(new Intent(getApplicationContext()
-                                ,Inicio.class));
-                        overridePendingTransition(0,0);
-                        return true;
+    public void ClickLogo(View view){
+        //cerrar
+        Inicio.closeDrawer(drawerLayout);
+    }
+    public void ClickHome(View view){
+        //redicerrecion princopal
+        Inicio.redirectActivity(this,Inicio.class);
+    }
 
 
-                    case R.id.Mascotas:
-                        startActivity(new Intent(getApplicationContext()
-                                , Registro_Mascotas.class));
-                        overridePendingTransition(0,0);
-                        return true;
+    public void ClickRegistro_Mascotas(View view){
+        Inicio.redirectActivity(this,Registro_Mascotas.class);
+    }
+    public void ClickMiCuenta(View view){
+        //Redireccionar a la 3ra actividad
+        recreate();
+    }
+    public void ClickLogout(View view){
+        //Cerrar Sesión
+        Inicio.logout(this);
+    }
+    @Override
+    protected void  onPause() {
+        super.onPause();
+        //Cerrar Drawer
+        Inicio.closeDrawer(drawerLayout);
 
-                    case R.id.MiCuenta:
-                        return true;
-
-                }
-                return false;
-            }
-        });
     }
 }
 

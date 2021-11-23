@@ -1,58 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-
+<androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawerlayout"
     tools:context=".Actividades.Ventanas_Principales.Inicio">
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@color/white"
-        app:fabCradleMargin="10dp"
-        app:fabCradleRoundedCornerRadius="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="BottomAppBar,MissingConstraints">
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/barra_navegacion_inferior"
-            android:layout_width="match_parent"
-
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-
-            android:background="@android:color/transparent"
-            app:itemBackground="@android:color/transparent"
-            app:itemIconTint="@color/selector"
-            app:itemTextColor="@color/selector"
-            app:labelVisibilityMode="labeled"
-            app:menu="@menu/menu_navegacion"
-            tools:layout_editor_absoluteX="16dp" />
-
-
-    </com.google.android.material.bottomappbar.BottomAppBar>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        layout="@layout/main_toolbar"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mascotlist"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"/>
 
 
-        app:layout_constraintBottom_toTopOf="@+id/bottomAppBar"
+</LinearLayout>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white">
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <include
+            layout="@layout/main_nav_drawer"/>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
 
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
 
 

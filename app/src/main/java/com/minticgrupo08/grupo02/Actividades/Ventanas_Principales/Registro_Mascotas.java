@@ -3,6 +3,7 @@ package com.minticgrupo08.grupo02.Actividades.Ventanas_Principales;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -29,49 +30,17 @@ public class Registro_Mascotas extends AppCompatActivity {
     private Button aStorage;
     private StorageReference myStorage;
     private static final int GALLERY_INTENT = 1;
+    DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_mascotas); //Barra de Navegación
-        //Iniciar y Crear Variables
-        BottomNavigationView bottomNavigationView = findViewById(R.id.barra_navegacion_inferior);
-        //Selección Principal
-        bottomNavigationView.setSelectedItemId(R.id.Mascotas);
-        //Desing
-        bottomNavigationView.setBackground(null);
-        //Item Select Listener
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()){
 
-
-                    case R.id.Inicio:
-                        startActivity(new Intent(getApplicationContext()
-                                ,Inicio.class));
-                        overridePendingTransition(0,0);
-                        return true;
-
-
-
-
-                    case R.id.Mascotas:
-                        return true;
-
-                    case R.id.MiCuenta:
-                        startActivity(new Intent(getApplicationContext()
-                                ,MiCuenta.class));
-                        overridePendingTransition(0,0);
-                        return true;
-
-                }
-                return false;
-            }
-        });
         txtnombre = findViewById(R.id.txtNombreMascota);
         txtdescripcion = findViewById(R.id.txtDescripcion);
-
+        //NAV
+        drawerLayout =findViewById(R.id.drawerlayout);
         //storage imagenes
         myStorage = FirebaseStorage.getInstance().getReference();
              /////////BOTON
@@ -87,6 +56,39 @@ public class Registro_Mascotas extends AppCompatActivity {
                 startActivityForResult(intent, GALLERY_INTENT);
             }
         });
+    }
+    public void ClickMenu (View view){
+        //Open Drawer
+        Inicio.openDrawer(drawerLayout);
+    }
+    public void ClickLogo(View view){
+        //cerrar
+        Inicio.closeDrawer(drawerLayout);
+    }
+    public void ClickHome(View view){
+        //redicerrecion princopal
+        Inicio.redirectActivity(this,Inicio.class);
+    }
+
+
+    public void ClickRegistro_Mascotas(View view){
+        //redicerrecion princopal
+        recreate();
+    }
+    public void ClickAboutUs(View view){
+        //redicerrecion princopal
+        recreate();
+    }
+    public void ClickLogout(View view){
+        //Cerrar Sesión
+        Inicio.logout(this);
+    }
+    @Override
+    protected void  onPause() {
+        super.onPause();
+        //Cerrar Drawer
+        Inicio.closeDrawer(drawerLayout);
+
     }
     public void atexto(View view) {
         Mascota mascota = new Mascota();
