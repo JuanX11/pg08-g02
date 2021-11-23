@@ -1,4 +1,4 @@
-package com.minticgrupo08.grupo02;
+package com.minticgrupo08.grupo02.Actividades;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.os.Handler;
 import android.view.WindowManager;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.minticgrupo08.grupo02.Actividades.Ventanas_Principales.Inicio;
+import com.minticgrupo08.grupo02.R;
 
 public class SplashActivity extends AppCompatActivity {
     private final int DURACION_SPLASH= 3000;

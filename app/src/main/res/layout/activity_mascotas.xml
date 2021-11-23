@@ -1,17 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Mascotas">
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Mascotas"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"/>
+    tools:context=".Actividades.Ventanas_Principales.Inicio">
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -21,7 +15,8 @@
         android:background="@color/white"
         app:fabCradleMargin="10dp"
         app:fabCradleRoundedCornerRadius="50dp"
-        >
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="BottomAppBar,MissingConstraints">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/barra_navegacion_inferior"
@@ -30,28 +25,36 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
 
+            android:layout_marginRight="20dp"
             android:background="@android:color/transparent"
             app:itemBackground="@android:color/transparent"
-            app:menu="@menu/menu_navegacion"
-            android:layout_marginRight="20dp"
-            app:labelVisibilityMode="labeled"
-            app:itemTextColor="@color/selector"
             app:itemIconTint="@color/selector"
-            />
+            app:itemTextColor="@color/selector"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/menu_navegacion" />
 
 
     </com.google.android.material.bottomappbar.BottomAppBar>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+    <include
+        android:padding="100dp"
+        layout="@layout/activity_registro_mascotas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_navegacion_inferior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_suma"
-        app:layout_anchor="@id/bottomAppBar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
 

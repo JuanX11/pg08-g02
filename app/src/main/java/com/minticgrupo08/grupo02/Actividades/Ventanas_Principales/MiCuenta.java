@@ -1,4 +1,4 @@
-package com.minticgrupo08.grupo02;
+package com.minticgrupo08.grupo02.Actividades.Ventanas_Principales;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.minticgrupo08.grupo02.R;
 
 public class MiCuenta extends AppCompatActivity {
 
@@ -38,7 +39,7 @@ public class MiCuenta extends AppCompatActivity {
 
                     case R.id.Mascotas:
                         startActivity(new Intent(getApplicationContext()
-                                ,Mascotas.class));
+                                , Registro_Mascotas.class));
                         overridePendingTransition(0,0);
                         return true;
 

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/teal_200"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        app2:cardCornerRadius="10dp"
+        app2:layout_constraintEnd_toEndOf="parent"
+        app2:layout_constraintStart_toStartOf="parent"
+        app2:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/ImagenMascota"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                app2:layout_constraintBottom_toBottomOf="parent"
+                app2:layout_constraintEnd_toEndOf="parent"
+                app2:layout_constraintHorizontal_bias="0.015"
+                app2:layout_constraintStart_toStartOf="parent"
+                app2:layout_constraintTop_toTopOf="parent"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Descripción"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app2:layout_constraintEnd_toEndOf="parent"
+                app2:layout_constraintHorizontal_bias="1.0"
+                app2:layout_constraintStart_toEndOf="@+id/ImagenMascota"
+                app2:layout_constraintTop_toBottomOf="@+id/NombreMascota" />
+
+            <TextView
+                android:id="@+id/descripciontxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Aqui va la descripción"
+                android:textSize="10sp"
+                app2:layout_constraintEnd_toEndOf="parent"
+                app2:layout_constraintHorizontal_bias="0.048"
+                app2:layout_constraintStart_toEndOf="@+id/ImagenMascota"
+                app2:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/NombreMascota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="160dp"
+                android:text="Pedrito"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app2:layout_constraintEnd_toEndOf="parent"
+                app2:layout_constraintHorizontal_bias="0.0"
+                app2:layout_constraintStart_toEndOf="@+id/ImagenMascota"
+                app2:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
