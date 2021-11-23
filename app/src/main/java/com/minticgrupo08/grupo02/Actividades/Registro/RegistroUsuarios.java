@@ -22,7 +22,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.minticgrupo08.grupo02.R;
 
-class RegisUsuarioActivity extends AppCompatActivity implements  View.OnClickListener{
+public class RegistroUsuarios extends AppCompatActivity implements  View.OnClickListener{
 
     //defino variables
     private EditText TextEmail;
@@ -80,9 +80,9 @@ class RegisUsuarioActivity extends AppCompatActivity implements  View.OnClickLis
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(RegisUsuarioActivity.this, "Usuario registrado ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegistroUsuarios.this, "Usuario registrado ", Toast.LENGTH_LONG).show();
                         } else {
-                            Toast.makeText(RegisUsuarioActivity.this, "No se pudo registrar el usuario", Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegistroUsuarios.this, "No se pudo registrar el usuario", Toast.LENGTH_LONG).show();
                         }
                         progressDialog.dismiss();
 
