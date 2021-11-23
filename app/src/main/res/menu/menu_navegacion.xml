@@ -9,17 +9,8 @@
         android:title="Inicio"
         android:icon="@drawable/ic_launcher_foreground"
         />
-    <item
-        android:id="@+id/Buscador"
-        android:title="Buscador"
-        android:icon="@drawable/ic_launcher_foreground"/>
 
 
-    <item
-    android:id="@+id/holder"
-    android:title=""
-    app:showAsAction="ifRoom"
-    android:enabled="false"/>
 
     <item
         android:id="@+id/Mascotas"

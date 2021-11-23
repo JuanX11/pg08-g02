@@ -1,58 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MiCuenta">
+    tools:context=".Actividades.Ventanas_Principales.Registro_Mascotas">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            layout="@layout/main_toolbar"/>
 
-        android:text="MiCuenta"
-        android:textSize="50sp"
-        android:textStyle="bold" />
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@color/white"
-        app:fabCradleMargin="10dp"
-        app:fabCradleRoundedCornerRadius="50dp"
-        >
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/barra_navegacion_inferior"
-            android:layout_width="wrap_content"
-
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-
-            android:background="@android:color/transparent"
-            app:itemBackground="@android:color/transparent"
-            app:menu="@menu/menu_navegacion"
-            android:layout_marginRight="20dp"
-            app:labelVisibilityMode="labeled"
-            app:itemTextColor="@color/selector"
-            app:itemIconTint="@color/selector"
-            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="AAAAAAAAAA"/>
 
 
-    </com.google.android.material.bottomappbar.BottomAppBar>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_suma"
-        app:layout_anchor="@id/bottomAppBar" />
+        <include
+            layout="@layout/main_nav_drawer"/>
+    </RelativeLayout>
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
+
 
