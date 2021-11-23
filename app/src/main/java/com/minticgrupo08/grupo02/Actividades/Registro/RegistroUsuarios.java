@@ -1,4 +1,4 @@
-package com.minticgrupo08.grupo02;
+package com.minticgrupo08.grupo02.Actividades.Registro;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,8 +20,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.minticgrupo08.grupo02.R;
 
-public class RegisUsuarioActivity extends AppCompatActivity implements  View.OnClickListener{
+class RegisUsuarioActivity extends AppCompatActivity implements  View.OnClickListener{
 
     //defino variables
     private EditText TextEmail;
@@ -35,7 +36,7 @@ public class RegisUsuarioActivity extends AppCompatActivity implements  View.OnC
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_regis_usuario);
+        setContentView(R.layout.activity_registro_usuarios);
 
         //inicializacion del objeto firebase
         firebaseAuth = FirebaseAuth.getInstance();

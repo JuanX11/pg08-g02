@@ -4,6 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Actividades.Registro.RegistroUsuarios">
+    tools:context=".Actividades.Registro.RegisUsuarioActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="#6BB3A1"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="10dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:adjustViewBounds="false"
+            android:src="@drawable/img_0"
+            app:srcCompat="@drawable/img_0" />
+
+        <EditText
+            android:id="@+id/TextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="50dp"
+            android:autoLink="email"
+            android:background="@android:drawable/edit_text"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:isScrollContainer="true"
+            android:text="@string/entrada_email"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/TextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="50dp"
+            android:background="@android:drawable/edit_text"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:text="@string/entrada_password"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/Boton_Registrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:elevation="20dp"
+            android:gravity="center_horizontal"
+            android:onClick="onClick"
+            android:shadowRadius="10"
+            android:text="@string/registrar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

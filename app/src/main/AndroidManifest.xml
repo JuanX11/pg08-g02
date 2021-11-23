@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mintic">
         <activity
-            android:name=".Actividades.Registro.RegistroUsuarios"
+            android:name=".Actividades.Registro.RegisUsuarioActivity"
             android:exported="true" />
         <activity
             android:name=".Actividades.Ventanas_Principales.Registro_Mascotas"
