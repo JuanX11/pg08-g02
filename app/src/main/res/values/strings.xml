@@ -16,7 +16,7 @@
     <string name="botonRegistrar">Registrar</string>
 
     <!--MIS DATOS-->
-    <string name="MisDatosTXT">Mis Cuenta</string>
+    <string name="MisDatosTXT">MI CUENTA</string>
     <string name="uidDato">UID</string>
     <string name="NombresDato">NOMBRES</string>
     <string name="ApellidosDato">APELLIDOS</string>
