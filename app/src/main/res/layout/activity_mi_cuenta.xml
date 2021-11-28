@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Actividades.Ventanas_Principales.Registro_Mascotas">
+    android:id="@+id/drawerlayout"
+    tools:context=".Actividades.Ventanas_Principales.MiCuenta">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +18,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="AAAAAAAAAA"/>
+            android:textStyle="bold"
+            android:text="asfag"/>
 
 
     </LinearLayout>
@@ -30,8 +32,7 @@
         <include
             layout="@layout/main_nav_drawer"/>
     </RelativeLayout>
-
-
 </androidx.drawerlayout.widget.DrawerLayout>
+
 
 

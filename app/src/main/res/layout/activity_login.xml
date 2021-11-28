@@ -16,12 +16,8 @@
 
         android:layout_marginTop="100dp"
         android:src="@drawable/img_0" />
-    <View
-    android:layout_width="match_parent"
-    android:layout_height="210dp"
-    android:layout_alignParentBottom="true"
-    android:layout_marginBottom="0dp"
-    android:background="@drawable/fondoblancologin" />
+
+
 
 
     />
@@ -58,7 +54,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/UsuarioLogin"
+            android:id="@+id/EmailLogin"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="50dp"
@@ -112,26 +108,7 @@
             />
 
 
-
     </LinearLayout>
-
-    <Button
-        android:id="@+id/Boton_irARegistrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
-
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/btn_redondeados_spacegray"
-        android:backgroundTint="@color/white"
-        android:elevation="20dp"
-        android:gravity="center"
-        android:onClick="ClickLogin"
-        android:shadowRadius="10"
-        android:text="Registrarse" />
 
 
 </RelativeLayout>

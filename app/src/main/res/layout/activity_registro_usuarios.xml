@@ -28,7 +28,7 @@
             app:srcCompat="@drawable/img_0" />
 
         <EditText
-            android:id="@+id/TextEmail"
+            android:id="@+id/EmailRegistro"
             android:layout_width="match_parent"
             android:layout_height="39dp"
             android:layout_marginLeft="50dp"
@@ -48,7 +48,7 @@
             android:textStyle="italic" />
 
         <EditText
-            android:id="@+id/TextPassword"
+            android:id="@+id/ContraseñaRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"

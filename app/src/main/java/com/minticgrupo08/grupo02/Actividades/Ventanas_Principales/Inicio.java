@@ -1,5 +1,6 @@
 package com.minticgrupo08.grupo02.Actividades.Ventanas_Principales;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -14,6 +15,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
@@ -22,6 +24,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import com.minticgrupo08.grupo02.Actividades.Registro.Login;
 import com.minticgrupo08.grupo02.Adapter.Adapter;
 import com.minticgrupo08.grupo02.Adapter.Mascota;
 import com.minticgrupo08.grupo02.R;
@@ -71,39 +74,9 @@ ArrayList<Mascota> list;
 
             }
         });
-
-/*
-        //Barra de Navegación
-        //Iniciar y Crear Variables
-        BottomNavigationView bottomNavigationView = findViewById(R.id.barra_navegacion_inferior);
-        //Selección Principal
-        bottomNavigationView.setSelectedItemId(R.id.Inicio);
-        //Desing
-        bottomNavigationView.setBackground(null);
-        //Item Select Listener
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.Inicio:
-                        return true;
+    }
 
 
-                    case R.id.Mascotas:
-                        startActivity(new Intent(getApplicationContext()
-                                , Registro_Mascotas.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-
-                    case R.id.MiCuenta:
-                        startActivity(new Intent(getApplicationContext()
-                                , MiCuenta.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-
-                }
-                return false;*/
-            }
         public void ClickMenu (View view){
             //Open Drawer
             openDrawer(drawerLayout);
@@ -127,7 +100,8 @@ ArrayList<Mascota> list;
     }
     public void ClickHome(View view){
         //Recargar actividad
-        recreate();
+        Toast.makeText(this, "Ya te encuentras en esta ventana.", Toast.LENGTH_SHORT).show();
+
     }
     public void ClickRegistro_Mascotas(View view){
         redirectActivity(this,Registro_Mascotas.class);
@@ -135,19 +109,62 @@ ArrayList<Mascota> list;
     public void ClickMiCuenta(View view){
         //Redireccionar a la 3ra actividad
         redirectActivity(this,MiCuenta.class);
+
     }
-    public void ClickLogout(View view){
+    public void ClickCerrarSesion(View view){
         //Cerrar Sesión
+        salir(this);
+    }
+
+    public void salir(Activity activity) {
+        //Inicializar alert
+        AlertDialog.Builder builder =new AlertDialog.Builder(activity);
+        //TITULO
+        builder.setTitle("Cerrar Sesión");
+        //MENSAJE
+        builder.setMessage("¿Seguro Quieres Cerrar Sesión?");
+
+        //Boton Si
+        builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //finish activity
+                activity.finishAffinity();
+                //salir app
+                Intent intent= new Intent(getApplicationContext(),Login.class);
+               startActivity(intent);
+            }
+        });
+        //Boton No
+        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //dissmiss dialog
+                dialog.dismiss();
+            }
+        });
+        //show dialog
+        builder.show();
+
+
+    }
+
+
+
+    public void ClickLogout(View view){
+        //Cerrar App
         logout(this);
     }
+
+
 
     public static void logout(Activity activity) {
     //Inicializar alert
         AlertDialog.Builder builder =new AlertDialog.Builder(activity);
     //TITULO
-        builder.setTitle("Cerrar Sesión");
+        builder.setTitle("Cerrar App");
     //MENSAJE
-        builder.setMessage("¿Seguro quieres Cerrar Sesión?");
+        builder.setMessage("¿Seguro Quieres Cerrar La Aplicación?");
 
     //Boton Si
         builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
