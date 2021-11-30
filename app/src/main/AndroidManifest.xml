@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mintic">
         <activity
-            android:name=".Actividades.Registro.Login"
+            android:name=".Actividades.SplashActivity"
             android:exported="true" />
         <activity
             android:name=".Actividades.Registro.RegistroUsuarios"
@@ -23,7 +23,7 @@
             android:name=".Actividades.Ventanas_Principales.Registro_Mascotas"
             android:exported="true" />
         <activity
-            android:name=".Actividades.SplashActivity"
+            android:name=".Actividades.Registro.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
