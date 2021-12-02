@@ -14,4 +14,5 @@
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="botonIngresar">Ingresar</string>
     <string name="botonRegistrar">Registrar</string>
+    <string name="informacion_adicional">Informacion Adicional</string>
 </resources>
