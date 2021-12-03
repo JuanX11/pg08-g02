@@ -3,9 +3,18 @@ package com.minticgrupo08.grupo02.Actividades.Ventanas_Principales;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Base64;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.minticgrupo08.grupo02.R;
 
@@ -18,6 +27,7 @@ public class infoAdicionalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_info_adicional);
 
         btnTerms = findViewById(R.id.btnTermsyCond);
+
     }
 
     public void abrirTerminos(View view){
@@ -33,7 +43,6 @@ public class infoAdicionalActivity extends AppCompatActivity {
 
     public void abrirDerechos(View view){
         String info="Considerando que todo animal posee derechos y que el desconocimiento y desprecio de dichos derechos han conducido y siguen conduciendo al hombre a cometer crímenes contra la naturaleza y los animales, se proclama lo siguiente:\n\n" +
-
                 "Artículo No. 1\n" +
                 "\n" +
                 "Todos los animales nacen iguales ante la vida y tienen los mismos derechos a la existencia.\n" +
@@ -125,4 +134,43 @@ public class infoAdicionalActivity extends AppCompatActivity {
                 .setPositiveButton("Aceptar", null).show();
 
     }
+
+    public void abrirAcercade(View view){
+        LayoutInflater li = LayoutInflater.from(this);
+        View promptsView = li.inflate(R.layout.acercade_dialog, null);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setView(promptsView);
+        //final EditText et1 =  promptsView.findViewById(R.id.input_buscar_img);
+        alertDialogBuilder
+                .setCancelable(false)
+                .setPositiveButton("Aceptar", null);
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+
+    }
+
+    public void irFacebook(View view){
+        Uri link = Uri.parse("https://www.facebook.com/");
+        Intent i = new Intent(Intent.ACTION_VIEW, link);
+        startActivity(i);
+    }
+
+    public void irInstagram(View view){
+        Uri link = Uri.parse("https://www.instagram.com/");
+        Intent i = new Intent(Intent.ACTION_VIEW, link);
+        startActivity(i);
+    }
+
+    public void irYoutube(View view){
+        Uri link = Uri.parse("https://www.youtube.com/");
+        Intent i = new Intent(Intent.ACTION_VIEW, link);
+        startActivity(i);
+    }
+
+    public void irLinkedin(View view){
+        Uri link = Uri.parse("https://www.linkedin.com/");
+        Intent i = new Intent(Intent.ACTION_VIEW, link);
+        startActivity(i);
+    }
+
 }
