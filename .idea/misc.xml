@@ -3,12 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/TIC/CICLO_4/pg08-g02/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.109765625" />
-        <entry key="..\:/TIC/CICLO_4/pg08-g02/app/src/main/res/layout-w936dp/activity_login.xml" value="0.1" />
-        <entry key="..\:/TIC/CICLO_4/pg08-g02/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/TIC/CICLO_4/pg08-g02/app/src/main/res/layout/activity_login2.xml" value="0.1272644927536232" />
-        <entry key="..\:/TIC/CICLO_4/pg08-g02/app/src/main/res/layout/activity_regis_usuario.xml" value="0.16" />
-        <entry key="..\:/TIC/CICLO_4/pg08-g02/app/src/main/res/layout/activity_splash.xml" value="0.10778985507246377" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/Mintic/app/src/main/res/drawable/barra_inferior_desing.xml" value="0.15989583333333332" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/Mintic/app/src/main/res/drawable/blancoprueba.xml" value="0.15989583333333332" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/Mintic/app/src/main/res/drawable/selector.xml" value="0.22592592592592592" />
@@ -25,14 +19,12 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/fondo_login.xml" value="0.240625" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/fondo_splash.xml" value="0.240625" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/fondoblancologin.xml" value="0.240625" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/ic_menu.xml" value="0.23425925925925925" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/ic_sharp_person.xml" value="0.23425925925925925" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/ic_suma.xml" value="0.11510416666666666" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout-w1240dp/LoginSystem.xml" value="0.160546875" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout-w936dp/LoginSystem.xml" value="0.168359375" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/LoginSystem.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_inicio.xml" value="0.1" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_login.xml" value="0.14" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_mascotas.xml" value="0.22" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_mi_cuenta.xml" value="0.22447916666666667" />
@@ -45,7 +37,7 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/fragment_login.xml" value="0.22" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/item.xml" value="0.25" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/login.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/main_nav_drawer.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/main_nav_drawer.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/main_toolbar.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/nav_header.xml" value="0.1824074074074074" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/menu/drawer_menu.xml" value="0.1824074074074074" />
