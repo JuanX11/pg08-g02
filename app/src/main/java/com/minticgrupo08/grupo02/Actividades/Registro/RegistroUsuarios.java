@@ -5,19 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Html;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.minticgrupo08.grupo02.Actividades.Ventanas_Principales.Inicio;
 import com.minticgrupo08.grupo02.R;
 
 public class RegistroUsuarios extends AppCompatActivity implements  View.OnClickListener{
@@ -30,18 +32,6 @@ public class RegistroUsuarios extends AppCompatActivity implements  View.OnClick
 
     //declaracion del objeto firebase
     private  FirebaseAuth firebaseAuth;
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
-        if(currentUser != null){
-            reload();
-        }
-    }
-
-    private void reload() {
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +42,8 @@ public class RegistroUsuarios extends AppCompatActivity implements  View.OnClick
         firebaseAuth = FirebaseAuth.getInstance();
 
         //refernciamos los views
-        TextEmail = (EditText) findViewById(R.id.EmailRegistro);
-        TextPassword = (EditText) findViewById(R.id.ContraseñaRegistro);
+        TextEmail = (EditText) findViewById(R.id.TextEmail);
+        TextPassword = (EditText) findViewById(R.id.TextPassword);
         botonRegistrar = (Button) findViewById(R.id.Boton_Registrar);
 
         //dialogo que indica el progreso del registro
@@ -91,8 +81,6 @@ public class RegistroUsuarios extends AppCompatActivity implements  View.OnClick
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(RegistroUsuarios.this, "Usuario registrado ", Toast.LENGTH_LONG).show();
-                            Intent intent= new Intent(getApplicationContext(), Inicio.class);
-                            startActivity(intent);
                         } else {
                             Toast.makeText(RegistroUsuarios.this, "No se pudo registrar el usuario", Toast.LENGTH_LONG).show();
                         }
