@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#6BB3A1"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".Actividades.Ventanas_Principales.infoAdicionalActivity">
 
@@ -58,14 +59,14 @@
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/btnAcercade"
+            android:id="@+id/imageButton"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:onClick="abrirAcercade"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/img_0" />
+            android:onClick="abrirMensaje"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/mail" />
 
         <ImageButton
             android:id="@+id/imageButton6"
@@ -73,7 +74,21 @@
             android:layout_height="130dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:onClick="abrirRateapp"
+            android:scaleType="centerInside"
+            android:src="@drawable/rating"
+            tools:src="@drawable/rating" />
     </TableRow>
+
+    <ImageButton
+        android:id="@+id/btnAcercade"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="abrirAcercade"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/img_0"
+        tools:srcCompat="@drawable/img_0" />
 
 </LinearLayout>

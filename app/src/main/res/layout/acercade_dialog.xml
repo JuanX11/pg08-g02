@@ -78,9 +78,25 @@
         android:scaleType="centerInside"
         app:srcCompat="@drawable/img_0" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Version 1.0"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Desarrollado en Colombia" />
+
     <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
 
         <ImageButton
             android:id="@+id/btn_facebook"
@@ -127,5 +143,6 @@
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             app:srcCompat="@drawable/ic_linkedin" />
+
     </TableRow>
 </LinearLayout>

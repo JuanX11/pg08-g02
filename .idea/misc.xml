@@ -4,8 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/MisionTic/Desarrollo Movil/Proyecto MascotaApp/pg08-g02/app/src/main/res/drawable/ic_3puntosvertical.xml" value="0.1125" />
-        <entry key="..\:/MisionTic/Desarrollo Movil/Proyecto MascotaApp/pg08-g02/app/src/main/res/layout/acercade_dialog.xml" value="0.12" />
-        <entry key="..\:/MisionTic/Desarrollo Movil/Proyecto MascotaApp/pg08-g02/app/src/main/res/layout/activity_info_adicional.xml" value="0.1" />
+        <entry key="..\:/MisionTic/Desarrollo Movil/Proyecto MascotaApp/pg08-g02/app/src/main/res/layout/acercade_dialog.xml" value="0.14" />
+        <entry key="..\:/MisionTic/Desarrollo Movil/Proyecto MascotaApp/pg08-g02/app/src/main/res/layout/activity_info_adicional.xml" value="0.18" />
         <entry key="..\:/MisionTic/Desarrollo Movil/Proyecto MascotaApp/pg08-g02/app/src/main/res/layout/activity_inicio.xml" value="0.1" />
         <entry key="..\:/MisionTic/Desarrollo Movil/Proyecto MascotaApp/pg08-g02/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/MisionTic/Desarrollo Movil/Proyecto MascotaApp/pg08-g02/app/src/main/res/layout/activity_mascotas.xml" value="0.1" />
@@ -13,6 +13,8 @@
         <entry key="..\:/MisionTic/Desarrollo Movil/Proyecto MascotaApp/pg08-g02/app/src/main/res/layout/activity_registro_mascotas.xml" value="0.1" />
         <entry key="..\:/MisionTic/Desarrollo Movil/Proyecto MascotaApp/pg08-g02/app/src/main/res/layout/activity_registro_usuarios.xml" value="0.18" />
         <entry key="..\:/MisionTic/Desarrollo Movil/Proyecto MascotaApp/pg08-g02/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/MisionTic/Desarrollo Movil/Proyecto MascotaApp/pg08-g02/app/src/main/res/layout/contacto_dialog.xml" value="0.18" />
+        <entry key="..\:/MisionTic/Desarrollo Movil/Proyecto MascotaApp/pg08-g02/app/src/main/res/layout/rate_app_dialog.xml" value="0.1" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/Mintic/app/src/main/res/drawable/barra_inferior_desing.xml" value="0.15989583333333332" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/Mintic/app/src/main/res/drawable/blancoprueba.xml" value="0.15989583333333332" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/Mintic/app/src/main/res/drawable/selector.xml" value="0.22592592592592592" />

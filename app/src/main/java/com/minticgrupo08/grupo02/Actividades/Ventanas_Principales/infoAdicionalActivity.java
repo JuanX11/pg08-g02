@@ -12,10 +12,14 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RatingBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.minticgrupo08.grupo02.R;
 
 public class infoAdicionalActivity extends AppCompatActivity {
@@ -28,11 +32,34 @@ public class infoAdicionalActivity extends AppCompatActivity {
 
         btnTerms = findViewById(R.id.btnTermsyCond);
 
+
+
     }
 
-    public void abrirTerminos(View view){
-        String info="Ի՞նչ է Lorem Ipsum-ը\n" +
-                "Lorem Ipsum-ը տպագրության և տպագրական արդյունաբերության համար նախատեսված մոդելային տեքստ է: Սկսած 1500-ականներից` Lorem Ipsum-ը հանդիսացել է տպագրական արդյունաբերության ստանդարտ մոդելային տեքստ, ինչը մի անհայտ տպագրիչի կողմից տարբեր տառատեսակների օրինակների գիրք ստեղծելու ջանքերի արդյունք է: Այս տեքստը ոչ միայն կարողացել է գոյատևել հինգ դարաշրջան, այլև ներառվել է էլեկտրոնային տպագրության մեջ` մնալով էապես անփոփոխ: Այն հայտնի է դարձել 1960-ականներին Lorem Ipsum բովանդակող Letraset էջերի թողարկման արդյունքում, իսկ ավելի ուշ համակարգչային տպագրության այնպիսի ծրագրերի թողարկման հետևանքով, ինչպիսին է Aldus PageMaker-ը, որը ներառում է Lorem Ipsum-ի տարատեսակներ:";
+    public void abrirTerminos(View view) {
+        String info= "Terminos y condiciones \n\n" +
+                "Al acceder y utilizar este servicio, usted acepta y accede a estar obligado por los términos y disposiciones de este acuerdo. Asimismo, al utilizar estos servicios particulares, usted estará sujeto a toda regla o guía de uso correspondiente que se haya publicado para dichos servicios. Toda participación en este servicio constituirá la aceptación de este acuerdo. Si no acepta cumplir con lo anterior, por favor, no lo utilice.\n" +
+                "Favor leer cuidadosamente los siguientes términos y condiciones de uso:\n" +
+                "\n" +
+                "Uso de la aplicación\n\n" +
+                "Obtenemos derechos para negarnos a ofrecer MascotaApp como un servicio, y sin previo aviso o explicación, suspender el uso de la aplicación por cualquier periodo de tiempo. Esto significa que no podrá contribuir con ningún contenido a la aplicación.\n" +
+                "Cambios\n\n" +
+                "MascotaApp puede realizar cambios en el contenido disponible en los servicios en cualquier momento también puede cambiar, actualizar, agregar o eliminar disposiciones de estos Términos, en cualquier momento. Al utilizar los servicios después de que Missing Pets haya actualizado estos Términos, usted acepta todos los Términos actualizados; Si no está de acuerdo con alguno de los Términos actualizados, debe dejar de usar los servicios. Si utiliza los servicios, asegúrese de seguir y aceptar los Términos más recientes.\n" +
+                "\n" +
+                "Realimentación\n" +
+                "\n" +
+                "Si envía o transmite cualquier comunicación, comentario, pregunta, sugerencia o material relacionado con respecto a las Mascotas perdidas o los Servicios, ya sea por correo electrónico, dichos Comentarios son y serán tratados como no confidenciales y no propietario. Por la presente, usted asigna todos los derechos, títulos e intereses, y MascotaApp es de uso gratuito, sin ninguna atribución o compensación para usted, cualquier y todos los Comentarios para cualquier propósito. Usted comprende y acepta que MascotaApp no está obligada a usar, exhibir, reproducir o distribuir tales ideas, conocimientos, conceptos o técnicas contenidas en los Comentarios, y no tiene derecho a obligar dicho uso, exhibición, reproducción, o distribución.\n" +
+                "\n" +
+                "El contenido de la aplicación como texto, graficas, iconos e imágenes y demás contenido de la aplicación son únicamente con propósitos informativos y no pretende ser sustituto de la asesoría de un veterinario.\n" +
+                "En ningún momento la aplicación será responsable por algún daño directo o indirecto, incidental o consecuente incluyendo perdidas de beneficios lesiones o daños que surjan por el uso de la aplicación.\n" +
+                "\n" +
+                "Responsabilidad del contenido\n" +
+                "\n" +
+                "MascotaApp no puede y no es responsable por el contenido que comparten los usuarios. Al utilizar los servicios, acepta asumir la responsabilidad total del contenido que publica en la aplicación. Si ve contenido que viola los términos, usted, como usuario de MascotaApp, puede y debe informar dicho contenido y / o contactarnos directamente en mascotaapp@gmail.com\n" +
+                "\n" +
+                "Información normativa y otra información\n" +
+                "\n" +
+                "Toda la información incluyendo la personal registrada o incluida en la aplicación por usted, el usuario, será almacenada en la nube como usted considere adecuado. Usted es responsable de cualquier dato personal ingresado a la aplicación, así como cualquier acceso ofrecido, ya sea de forma voluntaria e involuntaria, incluyendo perdida de cualquier información.\n";
         new AlertDialog.Builder(this)
                 .setIcon(R.drawable.terms)
                 .setTitle("Terminos y condiciones")
@@ -146,6 +173,93 @@ public class infoAdicionalActivity extends AppCompatActivity {
                 .setPositiveButton("Aceptar", null);
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+
+    }
+
+    public void abrirRateapp(View view){
+
+        LayoutInflater li = LayoutInflater.from(this);
+        View promptsView = li.inflate(R.layout.rate_app_dialog, null);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setView(promptsView);
+        final RatingBar ratingBar = promptsView.findViewById(R.id.ratingBar);
+        final TextView txt_rating = promptsView.findViewById(R.id.txt_rating);
+        txt_rating.setText("La seleccion es: ");
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float ratingValue, boolean fromUser) {
+                String rating = "Las seleccion es: " + ratingValue;
+                txt_rating.setText(rating);
+            }
+        });
+
+        //final EditText et1 =  promptsView.findViewById(R.id.input_buscar_img);
+        alertDialogBuilder
+                .setCancelable(false)
+                .setTitle("Calificacion")
+                .setIcon(R.drawable.rating)
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        Toast.makeText(getApplicationContext(), "La valoracion es: " + ratingBar.getRating() , Toast.LENGTH_SHORT).show();
+                    }
+                });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+
+    }
+
+    public void abrirMensaje(View view){
+        LayoutInflater li = LayoutInflater.from(this);
+        View promptsView = li.inflate(R.layout.contacto_dialog, null);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setView(promptsView);
+        final TextInputEditText nombre = promptsView.findViewById(R.id.input_mensaje_nom)
+                ,asunto = promptsView.findViewById(R.id.input_mensaje_asunto)
+                ,correo = promptsView.findViewById(R.id.input_mensaje_correo)
+                ,telefono = promptsView.findViewById(R.id.input_mensaje_telefono)
+                ,mensaje = promptsView.findViewById(R.id.input_mensaje_mensaje);
+
+        final Button limpiar = promptsView.findViewById(R.id.btn_mensaje_limpiar),
+                enviar = promptsView.findViewById(R.id.btn_mensaje_enviar);
+
+        limpiar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nombre.setText("");
+                asunto.setText("");
+                correo.setText("");
+                telefono.setText("");
+                mensaje.setText("");
+            }
+        });
+
+        enviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!nombre.getText().equals("") && !asunto.getText().equals("") && !correo.getText().equals("") && !telefono.getText().toString().equals("") && !mensaje.getText().equals("")) {
+                    String info = "La informacion es:\n "
+                            + nombre.getText() + "\n"
+                            + asunto.getText() + "\n"
+                            + correo.getText() + "\n"
+                            + telefono.getText().toString() + "\n"
+                            + mensaje.getText();
+                    Toast.makeText(getApplicationContext(), info, Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getApplicationContext(), "¡Por favor llene todos los campos!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        //final EditText et1 =  promptsView.findViewById(R.id.input_buscar_img);
+        alertDialogBuilder
+                .setCancelable(false)
+                .setTitle("Contacto")
+                .setIcon(R.drawable.mail)
+                .setPositiveButton("Aceptar", null);
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+
 
     }
 
