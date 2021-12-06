@@ -1,6 +1,7 @@
 package com.minticgrupo08.grupo02.Actividades.Registro;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -15,8 +16,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.minticgrupo08.grupo02.Actividades.Ventanas_Principales.Inicio;
-import com.minticgrupo08.grupo02.Actividades.Ventanas_Principales.MiCuenta;
 import com.minticgrupo08.grupo02.R;
 
 public class RegistroUsuarios extends AppCompatActivity implements  View.OnClickListener{
@@ -87,15 +86,24 @@ public class RegistroUsuarios extends AppCompatActivity implements  View.OnClick
                 });
 
     }
-
+    //metodo para definir que accion se realiza o que metodo se llama de acuerdo al boton que presione el usuario
     @Override
     public void onClick(View v) {
-        registrarUsuario();
+        switch (v.getId()){                        //obtengo el id
+
+            case R.id.Boton_Registrar:
+                registrarUsuario();
+                break;
+
+            case R.id.Boton_volver:
+                Intent intent = new Intent(this, Login.class);
+                startActivity(intent);
+
+
+        }
+
+    }
 
     }
 
 
-    public void ClickA(View view) {
-        Inicio.redirectActivity(this, MiCuenta.class);
-    }
-}

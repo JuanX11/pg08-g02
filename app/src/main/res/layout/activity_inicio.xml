@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerlayout"
+    android:background="#6BB3A1"
     tools:context=".Actividades.Ventanas_Principales.Inicio">
 
 <LinearLayout

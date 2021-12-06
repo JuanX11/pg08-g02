@@ -19,14 +19,18 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/fondo_login.xml" value="0.240625" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/fondo_splash.xml" value="0.240625" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/fondoblancologin.xml" value="0.240625" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/ic__497553304_104_84834.xml" value="0.2064814814814815" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/ic_facebook.xml" value="0.2064814814814815" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/ic_home.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/ic_mascotas.xml" value="0.12604166666666666" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/ic_menu.xml" value="0.23425925925925925" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/ic_sharp_person.xml" value="0.23425925925925925" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/ic_suma.xml" value="0.11510416666666666" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/drawable/ic_youtube_icon_icons_com_66802.xml" value="0.2064814814814815" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout-w1240dp/LoginSystem.xml" value="0.160546875" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout-w936dp/LoginSystem.xml" value="0.168359375" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/LoginSystem.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/acercade_dialog.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/acercade_dialog.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_info_adicional.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_inicio.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_login.xml" value="0.25" />
@@ -35,15 +39,15 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_mi_cuenta.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_navegacionbar.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_regis_usuario.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_registro_mascotas.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_registro_mascotas.xml" value="0.18" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_registro_usuario.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_registro_usuarios.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_registro_usuarios.xml" value="0.18" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/activity_splash.xml" value="0.16944444444444445" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/contacto_dialog.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/fragment_login.xml" value="0.22" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/item.xml" value="0.25" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/login.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/main_nav_drawer.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/main_nav_drawer.xml" value="0.18" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/main_toolbar.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/nav_header.xml" value="0.1824074074074074" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/pg08-g02/app/src/main/res/layout/rate_app_dialog.xml" value="0.22447916666666667" />

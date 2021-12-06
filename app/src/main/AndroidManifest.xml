@@ -39,7 +39,9 @@
         <activity
             android:name=".Actividades.Ventanas_Principales.Registro_Mascotas"
             android:exported="true" />
-
+        <activity
+            android:name=".Actividades.Ventanas_Principales.infoAdicionalActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
