@@ -29,6 +29,8 @@
         android:gravity="center">
 
         <ImageButton
+            android:background="#00000000"
+
             android:id="@+id/btnTermsyCond"
             android:layout_width="130dp"
             android:layout_height="130dp"
@@ -40,6 +42,8 @@
             app:srcCompat="@drawable/terms" />
 
         <ImageButton
+            android:background="#00000000"
+
             android:id="@+id/btnDerechosAnim"
             android:layout_width="130dp"
             android:layout_height="130dp"
@@ -59,6 +63,8 @@
         android:gravity="center">
 
         <ImageButton
+            android:background="#00000000"
+
             android:id="@+id/imageButton"
             android:layout_width="130dp"
             android:layout_height="130dp"
@@ -69,6 +75,8 @@
             app:srcCompat="@drawable/mail" />
 
         <ImageButton
+            android:background="#00000000"
+
             android:id="@+id/imageButton6"
             android:layout_width="130dp"
             android:layout_height="130dp"
@@ -81,6 +89,7 @@
     </TableRow>
 
     <ImageButton
+        android:background="#00000000"
         android:id="@+id/btnAcercade"
         android:layout_width="130dp"
         android:layout_height="130dp"

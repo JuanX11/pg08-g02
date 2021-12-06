@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.minticgrupo08.grupo02.Actividades.Registro.Login;
+import com.minticgrupo08.grupo02.Actividades.Ventanas_Principales.Inicio;
 import com.minticgrupo08.grupo02.R;
 
 public class SplashActivity extends AppCompatActivity {

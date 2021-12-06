@@ -27,4 +27,11 @@
     <string name="TelefonoDato">TELEFONO</string>
     <string name="Actualizar">Actualizar Datos</string>
     <string name="ActualizarPass">Actualizar Pass</string>
+    <string name="informacion_adicional">Información Adicional</string>
+
+    <string name="registrar">Registrar</string>
+    <string name="entrada_email">Registrar</string>
+    <string name="entrada_password">Registrar</string>
+
+
 </resources>
