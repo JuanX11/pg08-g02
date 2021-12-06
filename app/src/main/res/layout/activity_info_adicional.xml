@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6BB3A1"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".Actividades.Ventanas_Principales.infoAdicionalActivity">
+
+    <TextView
+        android:id="@+id/text_titulo_infoadicional"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="@string/informacion_adicional"
+        android:textColor="@color/purple_700"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnTermsyCond"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:onClick="abrirTerminos"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/terms" />
+
+        <ImageButton
+            android:id="@+id/btnDerechosAnim"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:onClick="abrirDerechos"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/law_book"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:onClick="abrirMensaje"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/mail" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:onClick="abrirRateapp"
+            android:scaleType="centerInside"
+            android:src="@drawable/rating"
+            tools:src="@drawable/rating" />
+    </TableRow>
+
+    <ImageButton
+        android:id="@+id/btnAcercade"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="abrirAcercade"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/img_0"
+        tools:srcCompat="@drawable/img_0" />
+
+</LinearLayout>
