@@ -1,38 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawerlayout"
-    tools:context=".Actividades.Ventanas_Principales.MiCuenta">
+    tools:context=".Actividades.Ventanas_Principales.Registro_Mascotas">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="10dp"
         android:orientation="vertical">
         <include
             layout="@layout/main_toolbar"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textStyle="bold"
-            android:text="asfag"/>
+            android:text="@string/MisDatosTXT"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <!--IMAGEN DEL USUARIO-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ImagenDato"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/img_0"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp"
+            android:layout_gravity="center_horizontal">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                >
+                <!--NOMBRES-->
+                <TextView
 
+                    android:id="@+id/NombresDato"
+                    android:text="@string/NombresDato"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:paddingStart="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  Admin"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="3dp"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/CorreoDato"
+                    android:text="@string/CorreoDato"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:paddingStart="63dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=" admin@gmail.com"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="3dp"></TextView>
+            </LinearLayout>
+            <!--CORREO-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="100dp">
+                <!--Password-->
+                <TextView
+                    android:id="@+id/PasswordDato"
+                    android:text="@string/PasswordDato"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:paddingStart="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="   *********"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:layout_marginTop="3dp"></TextView>
+            </LinearLayout>
+            <!--EDAD-->
+
+            <!--DIRECCION-->
+
+            <!--TELEFONO-->
+
+            <!--BOTON ACTUALIZAR DATOS-->
+            <Button
+
+                android:id="@+id/Actualizar"
+                android:text="@string/Actualizar"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/btn_redondeados_spacegray"
+                android:textColor="#fff"
+                android:layout_gravity="center"
+                android:drawablePadding="15dp"
+                android:padding="15dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"/>
+
+            <!--BOTON ACTUALIZAR CONTRASEÑA-->
+            <Button
+                android:id="@+id/ActualizarPass"
+                android:text="@string/ActualizarPass"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_redondeados_spacegray"
+                android:textColor="#fff"
+                android:layout_gravity="center"
+                android:drawablePadding="15dp"
+                android:padding="15dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
     </LinearLayout>
+
     <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/white">
 
-        <include
-            layout="@layout/main_nav_drawer"/>
+        <include layout="@layout/main_nav_drawer" />
     </RelativeLayout>
-</androidx.drawerlayout.widget.DrawerLayout>
 
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
 
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MascotApp</string>
+    <string name="app_name">Mintic</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -14,8 +14,17 @@
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="botonIngresar">Ingresar</string>
     <string name="botonRegistrar">Registrar</string>
-    <string name="entrada_password" />
-    <string name="registrar" />
-    <string name="entrada_email" />
-    <string name="informacion_adicional" />
+
+    <!--MIS DATOS-->
+    <string name="MisDatosTXT">MI CUENTA</string>
+    <string name="uidDato">UID</string>
+    <string name="NombresDato">NOMBRES</string>
+    <string name="ApellidosDato">APELLIDOS</string>
+    <string name="CorreoDato">CORREO</string>
+    <string name="PasswordDato">PASSWORD</string>
+    <string name="EdadDato">EDAD</string>
+    <string name="DireccionDato">DIRECCION</string>
+    <string name="TelefonoDato">TELEFONO</string>
+    <string name="Actualizar">Actualizar Datos</string>
+    <string name="ActualizarPass">Actualizar Pass</string>
 </resources>
