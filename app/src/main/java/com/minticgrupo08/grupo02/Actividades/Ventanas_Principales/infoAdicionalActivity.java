@@ -1,29 +1,30 @@
 package com.minticgrupo08.grupo02.Actividades.Ventanas_Principales;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import com.google.android.material.textfield.TextInputEditText;
+import com.minticgrupo08.grupo02.Actividades.Registro.Login;
 import com.minticgrupo08.grupo02.R;
 
 public class infoAdicionalActivity extends AppCompatActivity {
     ImageButton btnTerms;
+    DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +32,12 @@ public class infoAdicionalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_info_adicional);
 
         btnTerms = findViewById(R.id.btnTermsyCond);
-
+        //nav
+        drawerLayout= findViewById(R.id.drawerlayout);
 
 
     }
-
-    public void abrirTerminos(View view) {
+        public void abrirTerminos(View view) {
         String info= "Terminos y condiciones \n\n" +
                 "Al acceder y utilizar este servicio, usted acepta y accede a estar obligado por los términos y disposiciones de este acuerdo. Asimismo, al utilizar estos servicios particulares, usted estará sujeto a toda regla o guía de uso correspondiente que se haya publicado para dichos servicios. Toda participación en este servicio constituirá la aceptación de este acuerdo. Si no acepta cumplir con lo anterior, por favor, no lo utilice.\n" +
                 "Favor leer cuidadosamente los siguientes términos y condiciones de uso:\n" +
@@ -287,4 +288,148 @@ public class infoAdicionalActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+
+    public void ClickMenu (View view){
+        //Open Drawer
+        openDrawer(drawerLayout);
+    }
+
+    public static void openDrawer(DrawerLayout drawerLayout) {
+        drawerLayout.openDrawer(GravityCompat.START);
+    }
+    public void ClickLogo(View view){
+        //CerrarDrawer
+        closeDrawer(drawerLayout);
+    }
+
+    public static void closeDrawer(DrawerLayout drawerLayout) {
+        //Close drawer layout
+        //check condition
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            //when drawer is open, close drawer
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+    }
+    public void ClickHome(View view){
+        //Redireccionar a la 3ra actividad
+        redirectActivity(this, Inicio.class);
+
+    }
+    public void ClickRegistro_Mascotas(View view){
+        redirectActivity(this,Registro_Mascotas.class);
+    }
+    public void ClickMiCuenta(View view){
+        //Recargar actividad
+        Toast.makeText(this, "Ya te encuentras en esta ventana.", Toast.LENGTH_SHORT).show();
+
+
+    }
+    public void ClickCerrarSesion(View view){
+        //Cerrar Sesión
+        salir(this);
+    }
+
+    public void salir(Activity activity) {
+        //Inicializar alert
+        AlertDialog.Builder builder =new AlertDialog.Builder(activity);
+        //TITULO
+        builder.setTitle("Cerrar Sesión");
+        //MENSAJE
+        builder.setMessage("¿Seguro Quieres Cerrar Sesión?");
+
+        //Boton Si
+        builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //finish activity
+                activity.finishAffinity();
+                //salir app
+                Intent intent= new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+            }
+        });
+        //Boton No
+        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //dissmiss dialog
+                dialog.dismiss();
+            }
+        });
+        //show dialog
+        builder.show();
+
+
+    }
+
+
+
+    public void ClickLogout(View view){
+        //Cerrar App
+        logout(this);
+    }
+
+
+
+    public static void logout(Activity activity) {
+        //Inicializar alert
+        AlertDialog.Builder builder =new AlertDialog.Builder(activity);
+        //TITULO
+        builder.setTitle("Cerrar App");
+        //MENSAJE
+        builder.setMessage("¿Seguro Quieres Cerrar La Aplicación?");
+
+        //Boton Si
+        builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //finish activity
+                activity.finishAffinity();
+                //salir app
+                System.exit(0);
+            }
+        });
+        //Boton No
+        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //dissmiss dialog
+                dialog.dismiss();
+            }
+        });
+        //show dialog
+        builder.show();
+
+
+    }
+
+    public static void redirectActivity(Activity activity, Class aClass) {
+        Intent intent = new Intent(activity, aClass);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        activity.startActivity(intent);
+    }
+    @Override
+    protected void  onPause() {
+        super.onPause();
+        //Cerrar Drawer
+        closeDrawer(drawerLayout);
+
+    }
+
+
+    public void ClickA(View view) {
+        Inicio.redirectActivity(this,infoAdicionalActivity.class);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+

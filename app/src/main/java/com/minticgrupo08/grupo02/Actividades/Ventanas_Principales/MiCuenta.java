@@ -152,6 +152,9 @@ DrawerLayout drawerLayout;
 
     }
 
+    public void ClickA(View view) {
+        Inicio.redirectActivity(this,MiCuenta.class);
+    }
 }
 
 

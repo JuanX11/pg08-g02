@@ -1,6 +1,13 @@
 package com.minticgrupo08.grupo02.Actividades.Ventanas_Principales;
 
-import androidx.activity.result.contract.ActivityResultContracts;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -8,22 +15,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import com.minticgrupo08.grupo02.Actividades.Registro.Login;
 import com.minticgrupo08.grupo02.Adapter.Adapter;
 import com.minticgrupo08.grupo02.Adapter.Mascota;
@@ -103,6 +99,9 @@ ArrayList<Mascota> list;
         Toast.makeText(this, "Ya te encuentras en esta ventana.", Toast.LENGTH_SHORT).show();
 
     }
+    public void ClickA(View view){
+        redirectActivity(this, infoAdicionalActivity.class);
+    }
     public void ClickRegistro_Mascotas(View view){
         redirectActivity(this,Registro_Mascotas.class);
     }
@@ -110,6 +109,15 @@ ArrayList<Mascota> list;
         //Redireccionar a la 3ra actividad
         redirectActivity(this,MiCuenta.class);
 
+
+    }
+    public void ClickAcerca(View view) {
+        //Redireccionar a la 3ra actividad
+        redirectActivity(this, infoAdicionalActivity.class);
+    }
+    public void ClickAcercade(View view){
+        //Redireccionar a la 3ra actividad
+        redirectActivity(this,infoAdicionalActivity.class);
     }
     public void ClickCerrarSesion(View view){
         //Cerrar Sesión
@@ -202,6 +210,7 @@ ArrayList<Mascota> list;
         closeDrawer(drawerLayout);
 
     }
+
 
 }
 
