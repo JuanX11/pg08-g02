@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerlayout"
+    android:background="#6BB3A1"
     tools:context=".Actividades.Ventanas_Principales.MiCuenta">
 
     <LinearLayout
@@ -16,14 +17,14 @@
         layout="@layout/main_toolbar"/>
 
 
-
         <TextView
-            android:text="@string/MisDatosTXT"
-            android:layout_gravity="center"
-            android:textSize="25sp"
-            android:textColor="#000"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Mi Cuenta"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            android:textSize="25sp" />
         <!--IMAGEN DEL USUARIO-->
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ImagenDato"
@@ -82,7 +83,7 @@
                     android:paddingStart="63dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text=" admin@gmail.com"
+                    android:text="  admin@gmail.com"
                     android:textSize="18sp"
                     android:textColor="#000"
                     android:layout_marginTop="3dp"></TextView>
@@ -96,7 +97,7 @@
                 <!--Password-->
                 <TextView
                     android:id="@+id/PasswordDato"
-                    android:text="@string/PasswordDato"
+                    android:text="CONTRASEÑA"
                     android:textSize="18sp"
                     android:textColor="#000"
                     android:layout_marginTop="3dp"
@@ -106,7 +107,7 @@
                     android:paddingStart="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="   *********"
+                    android:text="  *********"
                     android:textSize="18sp"
                     android:textColor="#000"
                     android:layout_marginTop="3dp"></TextView>
@@ -146,8 +147,7 @@
         android:layout_gravity="start"
         android:background="@color/white">
 
-        <include
-            layout="@layout/main_nav_drawer"/>
+        <include layout="@layout/main_nav_drawer" />
     </RelativeLayout>
 
 
