@@ -15,13 +15,11 @@
         android:theme="@style/Theme.Mintic">
         <activity
             android:name=".Actividades.Registro.Login"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Actividades.Registro.RegistroUsuarios"
             android:exported="true" />
-        <activity
-            android:name=".Actividades.Ventanas_Principales.Registro_Mascotas"
-            android:exported="true" />
+
         <activity
             android:name=".Actividades.SplashActivity"
             android:exported="true">
@@ -34,12 +32,14 @@
         <activity
             android:name=".Actividades.Ventanas_Principales.MiCuenta"
             android:exported="false" />
-        <activity
-            android:name=".Actividades.Ventanas_Principales.Mascotas"
-            android:exported="false" />
+
         <activity
             android:name=".Actividades.Ventanas_Principales.Inicio"
             android:exported="true" />
+        <activity
+            android:name=".Actividades.Ventanas_Principales.Registro_Mascotas"
+            android:exported="true" />
+
     </application>
 
 </manifest>
