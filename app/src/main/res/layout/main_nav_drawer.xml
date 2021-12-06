@@ -30,6 +30,7 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:onClick="ClickHome"
+            android:padding="8dp"
             >
 
             <TextView
@@ -37,13 +38,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Inicio"
+                android:textStyle="bold"
                 android:padding="12dp"
-                android:layout_marginStart="16dp"/>
+                android:layout_marginStart="50dp"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="48dp"
+                android:layout_marginEnd="50dp"
                 android:src="@drawable/ic_home" />
         </LinearLayout>
 
@@ -52,42 +54,120 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:onClick="ClickRegistro_Mascotas">
+        android:onClick="ClickRegistro_Mascotas"
+        android:padding="8dp">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Registrar Mascota"
+                android:textStyle="bold"
                 android:padding="12dp"
-                android:layout_marginStart="16dp"/>
+                android:layout_marginStart="50dp"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="48dp"
-                android:src="@drawable/ic_menu"/>
+                android:layout_marginEnd="50dp"
+                android:src="@drawable/ic_mascotas"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:onClick="ClickMiCuenta">
+        android:onClick="ClickMiCuenta"
+        android:padding="8dp">
 
             <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Mi Cuenta"
+                android:textStyle="bold"
             android:padding="12dp"
-            android:layout_marginStart="16dp"/>
+            android:layout_marginStart="50dp"/>
 
             <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="48dp"
-            android:src="@drawable/ic_menu"/>
+            android:layout_marginEnd="50dp"
+            android:src="@drawable/ic_sharp_person"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:onClick="ClickAcercade"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Acerca De"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:layout_marginStart="50dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:src="@drawable/ic_sharp_person"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:paddingTop="100dp"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:background="@drawable/btn_redondeados_spacegray"
+            android:gravity="center_horizontal"
+            android:text="Cerrar Sesión"
+
+
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:onClick="ClickCerrarSesion"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:background="@drawable/btn_redondeados_spacegray"
+            android:gravity="center_horizontal"
+            android:onClick="ClickLogout"
+
+            android:text="   Cerrar App  "
+
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        />
+
+
+    </LinearLayout>
+
 
 
 

@@ -5,6 +5,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.minticgrupo08.grupo02.Actividades.Registro.Login;
 import com.minticgrupo08.grupo02.Adapter.Mascota;
 import com.minticgrupo08.grupo02.R;
 
@@ -57,7 +61,8 @@ public class Registro_Mascotas extends AppCompatActivity {
             }
         });
     }
-    public void ClickMenu (View view){
+
+    public void ClickMenu(View view) {
         //Open Drawer
         Inicio.openDrawer(drawerLayout);
     }
@@ -69,16 +74,50 @@ public class Registro_Mascotas extends AppCompatActivity {
         //redicerrecion princopal
         Inicio.redirectActivity(this,Inicio.class);
     }
-
-
     public void ClickRegistro_Mascotas(View view){
-        //redicerrecion princopal
-        recreate();
+        Toast.makeText(this, "Ya te encuentras en esta ventana.", Toast.LENGTH_SHORT).show();
     }
-    public void ClickAboutUs(View view){
-        //redicerrecion princopal
-        recreate();
+    public void ClickMiCuenta(View view){
+        //Redireccionar a la 3ra actividad
+        Inicio.redirectActivity(this,MiCuenta.class);
     }
+    public void ClickCerrarSesion(View view) {
+        //Cerrar Sesión
+        salir(this);
+    }
+    public void salir(Activity activity) {
+        //Inicializar alert
+        AlertDialog.Builder builder =new AlertDialog.Builder(activity);
+        //TITULO
+        builder.setTitle("Cerrar Sesión");
+        //MENSAJE
+        builder.setMessage("¿Seguro Quieres Cerrar Sesión?");
+
+        //Boton Si
+        builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //finish activity
+                activity.finishAffinity();
+                //salir app
+                Intent intent= new Intent(getApplicationContext(),Login.class);
+                startActivity(intent);
+            }
+        });
+        //Boton No
+        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //dissmiss dialog
+                dialog.dismiss();
+            }
+        });
+        //show dialog
+        builder.show();
+
+
+    }
+
     public void ClickLogout(View view){
         //Cerrar Sesión
         Inicio.logout(this);
